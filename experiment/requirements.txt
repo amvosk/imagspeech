@@ -1,0 +1,6 @@
+scipy
+PyQt6
+psychopy
+psychtoolbox
+pylsl
+h5py
