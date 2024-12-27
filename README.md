@@ -5,7 +5,7 @@
 
 ### Установка
 
-1. Установить Python 3.10
+1. Установить Python 3.10 \
     https://www.python.org/downloads/release/python-31010/
 
 2. Cоздать виртуальную среду
