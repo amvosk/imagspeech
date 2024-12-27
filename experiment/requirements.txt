@@ -1,6 +1,6 @@
 scipy
 PyQt6
-psychopy
+psychopy==2023.2.0
 psychtoolbox
 pylsl
 h5py

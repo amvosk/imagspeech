@@ -20,7 +20,9 @@ class Recorder:
         now = datetime.datetime.now()
         date_string = now.strftime("%Y-%m-%d-%H-%M-%S")
 
-        with h5py.File('C:/PatientData/patient_spb/' + date_string + '.h5', 'w') as file:
+        dirpath = 'C:/PatientData/patient/'
+        os.makedirs(dirpath, exist_ok=True)
+        with h5py.File(dirpath + date_string + '.h5', 'w') as file:
             if len(self.memory) > 0:
                 stacked_data = np.concatenate(self.memory, axis=0)
                 file['raw_data'] = stacked_data

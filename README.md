@@ -10,7 +10,7 @@
 
 2. Cоздать виртуальную среду
    ```bash
-   <path/to/python>\Python310\python.exe -m venv venv_experiment
+   <path/to/python>/Python310/python.exe -m venv venv_experiment
 
 3. При необходимости - изменить права доступа
    ```bash
@@ -18,20 +18,24 @@
 
 4. Активировать виртуальную среду
    ```bash
-   venv_experiment\Scripts\activate
+   venv_experiment/Scripts/activate
 
 5. Установка зависимостей
    ```bash
     pip install -r /experiment/requirements.txt
 
+6. Распаковать архив `sound.zip` в папку `imagspeech/experiment/resource/`
+
 ### Запуск
 
 1. Активировать виртуальную среду
    ```bash
-   venv_experiment\Scripts\activate
+   venv_experiment/Scripts/activate
 
-2. Запустить программу
+2. Перейти в директорию
    ```bash
-   python /experiment/core/main.py
+   cd imagspeech/experiment/core
 
-
+3. Запустить программу
+   ```bash
+   python main.py

@@ -134,13 +134,12 @@ def run_experiment_text_listen(config, em, stop_event, pause_event):
 
     audio_dir = ''
     if config.voice_type in voice_types_yandex:
-        audio_dir = f'../words/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/text_full/'
+        audio_dir = f'../resource/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/text_full/'
     if config.voice_type in voice_types_sber:
-        audio_dir = f'../words/sounds/sber/{config.voice_type}/speed1/text_full/'
+        audio_dir = f'../resource/sounds/sber/{config.voice_type}/speed1/text_full/'
 
     stimulus_index = config.block_index
     audio_path = audio_dir + f'{stimulus_index + 1}.wav'
-    # print(audio_path)
     _, audio_array = scipy.io.wavfile.read(audio_path)
     audio_array = audio_array / np.max(np.abs(audio_array))
 
@@ -169,11 +168,11 @@ def run_experiment_words(config, em, stop_event, pause_event):
 
     audio_dir = ''
     if config.voice_type in voice_types_yandex:
-        audio_dir = f'../words/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/words/'
+        audio_dir = f'../resource/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/words/'
     if config.voice_type in voice_types_sber:
-        audio_dir = f'../words/sounds/sber/{config.voice_type}/speed1/words/'
+        audio_dir = f'../resource/sounds/sber/{config.voice_type}/speed1/words/'
 
-    words_path = f'../words/words_021523.txt'
+    words_path = f'../resource/words_full.txt'
     with open(words_path, 'r', encoding="utf8") as f:
         words_string = [line.rstrip() for line in f]
 
@@ -251,11 +250,11 @@ def run_experiment_subset(config, em, stop_event, pause_event):
 
     audio_dir = ''
     if config.voice_type in voice_types_yandex:
-        audio_dir = f'../words/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/words/'
+        audio_dir = f'../resource/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/words/'
     if config.voice_type in voice_types_sber:
-        audio_dir = f'../words/sounds/sber/{config.voice_type}/speed1/words/'
+        audio_dir = f'../resource/sounds/sber/{config.voice_type}/speed1/words/'
 
-    words_path = f'../words/words_021523.txt'
+    words_path = f'../resource/words_full.txt'
     with open(words_path, 'r', encoding="utf8") as f:
         words_string_ = [line.rstrip() for line in f]
 
@@ -340,11 +339,11 @@ def run_experiment_subset20(config, em, stop_event, pause_event):
 
     audio_dir = ''
     if config.voice_type in voice_types_yandex:
-        audio_dir = f'../words/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/words/'
+        audio_dir = f'../resource/sounds/yandex/{config.voice_type}/speed{int(config.voice_speed*10)}/words/'
     if config.voice_type in voice_types_sber:
-        audio_dir = f'../words/sounds/sber/{config.voice_type}/speed1/words/'
+        audio_dir = f'../resource/sounds/sber/{config.voice_type}/speed1/words/'
 
-    words_path = f'../words/words_021523.txt'
+    words_path = f'../resource/words_full.txt'
     with open(words_path, 'r', encoding="utf8") as f:
         words_string_ = [line.rstrip() for line in f]
 
@@ -544,7 +543,7 @@ class View:
         )
         self.icon_headphones = visual.ImageStim(
             self.win,
-            image='../images/icon_headphones.png',
+            image='../resource/images/icon_headphones.png',
             pos=(0, 0),
             color=self._get_color('grey'),
             size=(50*size, 50*size)
