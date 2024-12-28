@@ -1,1 +1,8 @@
-resampy
+requests
+pandas
+numpy
+scipy
+matplotlib
+tqdm
+IPython
+PyYAML

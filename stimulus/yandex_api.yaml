@@ -1,0 +1,8 @@
+# yandex_tts_config.yaml
+# Конфигурационный файл для работы с API Yandex SpeechKit (TTS)
+
+yandex_tts:
+  api_url: "https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize"  # URL API
+  iam_token: "your_iam_token_here"  # Токен IAM для авторизации
+  folder_id: "your_folder_id_here"  # ID каталога в Яндекс.Облаке
+
